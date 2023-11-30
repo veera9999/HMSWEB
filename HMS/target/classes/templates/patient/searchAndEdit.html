@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <title>HMS Patients</title>
+</head>
+<body>
+
+<header>
+  <h1>Hospital Management System</h1>
+  <p>Final IDS517 Project Fall Semester 2023</p>
+  <p>Group 4</p>
+</header>
+
+<div class="container">
+  <div th:insert="fragments/navbar.html"> </div>
+
+  <div class="jumbotron">
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Search and Edit Patients</h3>
+      </div>
+      <div class="col-md-6 text-right">
+        <button class="restore-button" type="button" onclick="restorePatient()">Restore Latest</button>
+      </div>
+    </div>
+
+    <form id="patientSearchForm" class="form-inline mt-3">
+      <label for="patientName">Search by Name:</label>
+      <input type="text" id="patientName" name="patientName">
+      <button type="button" onclick="searchPatients()">Search</button>
+    </form>
+
+    <table class="table table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">PhoneNumber</th>
+        <th scope="col">Email</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+      </thead>
+      <tbody id="patientTableBody">
+      <!-- Dynamic content will be inserted here -->
+      </tbody>
+    </table>
+
+    <form id="patientEditForm" style="display: none;">
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" name="editName"><br>
+
+      <label for="editAge">Age:</label>
+      <input type="text" id="editAge" name="editAge"><br>
+
+      <label for="editGender">Gender:</label>
+      <input type="text" id="editGender" name="editGender"><br>
+
+      <label for="editPhoneNumber">PhoneNumber:</label>
+      <input type="text" id="editPhoneNumber" name="editPhoneNumber"><br>
+
+      <label for="editEmail">Email:</label>
+      <input type="text" id="editEmail" name="editEmail"><br>
+
+      <button id="updateButton" type="button" onclick="updatePatient()">Update</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2023 Hospital Management System</p>
+  <p>Designed and Developed by Veera Palla</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/js/patient/searchAndEdit.js"></script>
+
+</body>
+</html>

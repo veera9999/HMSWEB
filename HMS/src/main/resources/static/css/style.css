@@ -1,0 +1,243 @@
+
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-image: url('../images/HMS.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+}
+
+
+
+.scheduler-container {
+    /*margin: 20px; !* Add space around the container *!*/
+    padding: 20px; /* Add internal padding */
+    background-color: #eaecef; /* Set a gray background color */
+}
+
+.scheduler-container label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Add this style to your existing CSS file or create a new one */
+.button-container {
+    margin-top: 20px; /* Add space above the button */
+}
+
+/* Style for the Insert Timeslot button */
+.btn-insert-timeslot {
+    padding: 10px 20px; /* Add padding to the button */
+}
+
+
+.timeslot-grid-container {
+    border: 1px solid #dee2e6;
+
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns for 8 working hours */
+    gap: 5px;
+}
+
+
+.timeslot-table-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.timeslot-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px; /* Add a small gap between timeslots for borders */
+}
+
+
+
+
+
+.timeslot-box {
+    width: 100%;
+    height: 60px; /* Increased height for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #ccc; /* Border between different time slots */
+}
+
+.timeslot-box.available {
+    background-color: #61c064; /* Green for available timeslots */
+}
+
+.timeslot-box.booked {
+    background-color: #53acf5; /* Red for booked timeslots */
+}
+
+.timeslot-box.remove {
+    background-color: rgb(255, 99, 71); /* Yellow for selected timeslots */
+}
+
+.timeslot-box.selected {
+    background-color: #ffd700; /* Yellow for selected timeslots */
+}
+
+/* Additional styling for clarity */
+.timeslot-box:hover {
+    filter: brightness(1.2);
+}
+
+.timeslot-box.available:not(.booked) {
+    cursor: pointer;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 123, 255, 0.90);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 123, 255, 0.90);
+    color: #fff;
+    text-align: center;
+    padding: 10px; /* Increased padding for better visibility */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1; /* Adjust the value as needed */
+}
+
+
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add space above the button */
+
+}
+
+restore-button {
+    background-color: #1BAF42E0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+restore-button:hover{
+    background-color: #178C36E0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Heading Styles */
+h3 {
+    color: #007bff;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+    background-color: rgba(248, 249, 250, 0.90);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Navigation Styles */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Main Content Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.container {
+    padding-bottom: 70px; /* Adjust the value as needed */
+}
+
+
+#dynamic-text {
+  font-family: 'Arial', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black; /* Cursor effect */
+  animation: typing 1s steps(30), blink 0.7s step-end infinite;
+}
+
+/* Cursor animations */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}

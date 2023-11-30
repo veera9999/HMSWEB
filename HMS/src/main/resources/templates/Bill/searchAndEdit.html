@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>HMS Bills</title>
+</head>
+<body>
+<header>
+    <h1>Hospital Management System</h1>
+    <p>Final IDS517 Project Fall Semester 2023</p>
+    <p>Group 4</p>
+</header>
+
+<div class="container">
+    <div th:insert="fragments/navbar.html"> </div>
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Search and Edit Bills</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <button class="restore-button" type="button" onclick="restoreBill()">Restore Latest</button>
+            </div>
+        </div>
+
+        <form id="BillSearchForm" class="form-inline">
+            <label for="patientName">Search by Patient Name:</label>
+            <input type="text" id="patientName" name="patientName">
+            <button type="button" onclick="searchBillsByPatientName()">Search</button>
+        </form>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">TimeSlot</th>
+                <th scope="col">Description</th>
+                <th scope='col'>Due Amount</th>
+            </tr>
+            </thead>
+            <tbody id="billTableBody">
+            <!-- Dynamic content will be inserted here -->
+            </tbody>
+        </table>
+
+        <form id="billEditForm" style="display: none;">
+
+            <label for="editPatientName">Patient Name:</label>
+            <input type="text" id="editPatientName" name="editPatientName" readonly><br>
+
+            <label for="editDoctorName">Doctor Name:</label>
+            <input type="text" id="editDoctorName" name="editDoctorName" readonly><br>
+
+            <label for="editTimeSlot">TimeSlot:</label>
+            <input type="text" id="editTimeSlot" name="editTimeSlot" readonly><br>
+
+            <label for="editDescription">Description:</label>
+            <input type="text" id="editDescription" name="editDescription"><br>
+
+            <label for="editDueAmount">Due Amount:</label>
+            <input type="text" id="editDueAmount" name="editDueAmount"><br>
+
+            <button id="updateButton" type="button" onclick="updateBill()">Update</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2023 Hospital Management System</p>
+    <p>Designed and Developed by Veera Palla</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="/js/Bill/searchAndEdit.js"></script>
+
+</body>
+</html>

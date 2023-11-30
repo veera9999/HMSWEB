@@ -1,0 +1,321 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Bundakji - Introduction</title>
+
+    <style>
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            background-image: url('/images/img3.jpg'); /* Set the background image */
+            background-repeat: repeat; /* You may adjust this property based on your preference */
+            color: #333;
+        }
+    
+        header {
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #cad2d9;
+        padding: 10px;
+        color: rgb(1, 0, 0);
+        border-radius: 10px;
+        transition: background-color 0.5s; /* Added transition for a smoother color change */
+    }
+    
+        h1 {
+            color: rgb(5, 5, 5);
+            margin: 0;
+        }
+    
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        /* Different colors for each button */
+        nav a:nth-child(1) {
+            background-color: #3498db;
+        }
+    
+        nav a:nth-child(2) {
+            background-color: #2ecc71;
+        }
+    
+        nav a:nth-child(3) {
+            background-color: #f39c12;
+        }
+    
+        nav a:nth-child(4) {
+            background-color: #9b59b6;
+        }
+    
+        nav a:hover {
+            background-color: #0056b3;
+        }
+    
+        .content {
+            background-color: #cad2d9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            margin-bottom: 20px;
+            transition: background-color 0.5s; /* Added transition for a smoother color change */
+            
+         
+        }
+        
+    
+        .content p {
+            text-align: justify;
+        }
+    
+        .content a {
+            color: #007bff;
+        }
+    
+        .skills button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .skills button:nth-child(1) {
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+    
+        .skills button:nth-child(2) {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+    
+        .skills button:nth-child(3) {
+            background-color: #ffc107; /* Yellow */
+            color: white;
+        }
+    
+        .skills button:nth-child(4) {
+            background-color: #6f42c1; /* Purple */
+            color: white;
+        }
+    
+        .skills button:hover {
+            background-color: #0056b3;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ibrahim Bundakji</h1>
+        <!-- Added color picker and label -->
+        <label for="headerColorPicker">Choose Color:</label>
+        <input type="color" id="headerColorPicker" oninput="changeBackgroundColor(this.value)">
+    </header>
+
+    <nav>
+        <a onclick="showPage('introduction')">Introduction</a>
+        <a onclick="showPage('education')">Education</a>
+        <a onclick="showPage('career')">Career</a>
+        <a onclick="showPage('skills')">Skills</a>
+    </nav>
+
+    <div class="content" id="introduction">
+        <h2>Introduction</h2>
+        
+        <p>I am a Jordanian with Syrian roots, born and raised in the capital of Jordan. My familial connection to Syria runs deep – my father, having spent 18 years in Syria, and my mother, although born in Jordan, also traces her roots back to Syria. The name "Bondokji" is a tribute to my great-grandparents, renowned for their profession in selling rifles during the Ottoman Empire. Pronounced as "Bondokia," this legacy has given rise to our family name, "Bondokji."</p>
+        
+        <p>From my earliest memories as a child, my fascination with computers and technology was evident. I was naturally drawn to dismantling gadgets and understanding how they worked. Building things, whether it was assembling a computer from spare parts or experimenting with different technologies, became a favorite pastime. This early passion for tinkering and exploration laid the foundation for my journey as a software engineer. As I grew older, my enthusiasm evolved into a dedicated pursuit of knowledge in the ever-evolving world of technology.</p>
+
+        <p>As a software engineer, I embody reliability, diligence, and a strong sense of responsibility. My unwavering drive propels me to craft software solutions that address real-world challenges, employing high-quality code and adhering to software design principles. I bring confidence and motivation to the professional realm, backed by a robust understanding of computing fundamentals, proficiency in object-oriented programming using Python, expertise in machine learning and data processing, and a solid grasp of UNIX-based systems. My toolkit extends to the utilization of software automation tools like Jenkins, Docker, and version control. As a dynamic team player, I excel in leading teams to plan, execute, and achieve high-quality project objectives.</p>
+    
+        <p>Technology, for me, is a powerful equalizer and a catalyst for progress. Growing up in Jordan, a developing country facing societal and environmental challenges, I witnessed its transformation into a prominent technology hub. This progress, attracting global tech giants like Amazon, Microsoft, and Oracle, owes its success to access to information technology. The internet age empowered young talents nationwide to learn beyond traditional curricula, fostering my passion and instilling a sense of responsibility to contribute to constructive change.</p>
+    
+        <p>My educational journey commenced with an undergraduate degree in Computer Science from the esteemed German Jordanian University, a top engineering and IT institution in Jordan. During my senior year, an internship at Mercedes-Benz Group’s Connected Cars division exposed me to software engineering. There, I successfully implemented a user analytics tool, showcasing my ability to collaborate within diverse teams.</p>
+    
+        <p>Driven by a thirst for knowledge, I integrated machine learning into my capstone project. This knowledge became instrumental when I assumed a leadership role at NAFITH, a logistics company. Despite resource constraints, I led a team to develop a cutting-edge license plate recognition system using computer vision and machine learning, transforming it into a commercially successful product.</p>
+    
+        <p>My professional journey continued at MBC Group, the largest media company in the MENA region. In my role as an AWS and Media Engineer, I manage server-less workflows and micro-services for video processing using AWS. Despite being new to AWS, my proactive approach has positioned me as a leader within the team, responsible for enhancing workflows to align with software engineering best practices.</p>
+    
+        <p>Motivated by a continuous pursuit of self-development, currently I am enrolled in the Master’s program in Management Information Systems at the University of Illinois at Chicago (UIC). This program aligns with my aspirations to specialize in both managerial and technical aspects of Information Technology.</p>
+    </div>
+    
+
+    <div class="content" id="career">
+        <h2>Career Experience</h2>
+    
+        <h3>MBC Group – Shahid, Amman, Jordan</h3>
+        <p><strong>Media Engineering - Team Lead</strong> | Aug. 2021 – June 2023</p>
+        <ul>
+            <li>Established a reputation as a trusted team lead through cross-team collaboration, simplifying and normalizing the video processing pipeline, reducing costs and operational workload.</li>
+            <li>Served as Lead Architect for AWS projects totaling hundreds of thousands of dollars.</li>
+            <li>Developed and implemented a streamlined process for the team, introducing version control and infrastructure as code for cloud deployments, resulting in improved team efficiency.</li>
+            <li>Demonstrated excellent diagnostic skills in problem-solving and consistently expanded knowledge of the organization's architecture.</li>
+            <li>Mentored and onboarded new joiners, growing the team from 4 to 9 members.</li>
+        </ul>
+        
+        <p><strong>AWS & Media Engineer</strong> | Dec. 2021 – July 2022</p>
+        <ul>
+            <li>Designed and built cloud-based solutions using AWS cloud technologies.</li>
+            <li>Worked with various teams to ensure solutions were delivered correctly and on time.</li>
+            <li>Worked with video encoding technologies and automated areas in the production environment using serverless technologies.</li>
+        </ul>
+    
+        <h3>Nafith Logistics International, Amman, Jordan</h3>
+        <p><strong>Software Engineer – Team Lead</strong> | Sep. 2020 – Dec. 2021</p>
+        <ul>
+            <li>Defined system requirements and software design.</li>
+            <li>Increased security through automating monitoring systems and operational tasks using machine learning.</li>
+            <li>Integrated with other systems of Nafith providing Freight management systems inside ports and industrial cities.</li>
+            <li>Overseen the implementation of AI edge devices across the city.</li>
+            <li>Programmed in Python and other languages.</li>
+            <li>Decreased processing time for vehicles entering industrial cities and ports from 30 seconds plus to approximately 5 seconds.</li>
+        </ul>
+    
+        <p><strong>Software Engineer</strong> | Dec. 2018 – Sep. 2020</p>
+        <ul>
+            <li>Developed License Plate Recognition system for Jordan and Gulf countries with 98% accuracy.</li>
+            <li>Optimized machine learning software to work on hardware with limited resources like Raspberry Pi and Jetson Nano.</li>
+            <li>Built various tools to decrease time spent on arranging datasets by 90%.</li>
+            <li>Refactored Node.js code and wrote REST API in Coldfusion.</li>
+        </ul>
+    
+        <h3>Citix, Amman, Jordan</h3>
+        <p><strong>Co-founder, Software Engineer</strong> | Jan. 2020 – Oct. 2020</p>
+        <p>Citix is a smart cities startup aiming to utilize traffic data to make cities less congested through controlling traffic intersections grid with computer vision and reinforcement learning. <a href="Citix_Demo_Link_Here" target="_blank">Demo: Citix Demo</a></p>
+    
+        <h3>Daimler AG, Stuttgart, Germany</h3>
+        <p><strong>Internship in Connected Cars</strong> | Oct. 2017 – May 2018</p>
+        <p>Software engineering internship to develop IoT Application for Mercedes cars.</p>
+    </div>
+
+    <div class="content" id="skills">
+        <h2>Skill Set</h2>
+        
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>Python (Object-Oriented Programming)</li>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Node.js</li>            
+        </ul>
+        
+    
+        <h3>Technologies and Tools</h3>
+        <ul>
+            <li>AWS Cloud Technologies</li>
+            <li>AWS Serverless Architecture</li>
+            <li>AWS Media Services</li>
+            <li>Jenkins (Automation)</li>
+            <li>Docker</li>
+            <li>Version Control (Git)</li>
+            <li>UNIX/Linux</li>
+            <li>Opencv</li>
+            <li>Tensorflow</li>
+            <li>Darknet</li>
+            <li>TensorRT</li>
+            <li>Microsoft Suites</li>
+        </ul>
+    
+        <h3>Software Engineering</h3>
+        <ul>
+            <li>Software Design Principles</li>
+            <li>High-Quality Code Writing</li>
+            <li>Object-Oriented Programming</li>
+            <li>Infrastructure as Code (IaC)</li>
+            <li>Version Control Systems</li>
+        </ul>
+    
+        <!-- Continue with the remaining skill categories -->
+    
+        <h3>Problem-Solving and Diagnostics</h3>
+        <ul>
+            <li>Excellent Diagnostic Skills</li>
+            <li>Problem-Solving</li>
+            <li>Architecture Understanding</li>
+        </ul>
+
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Reliability</li>
+            <li>Diligence</li>
+            <li>Strong Sense of Responsibility</li>
+            <li>Confidence and Motivation</li>
+            <li>Dynamic Team Player</li>
+            <li>Excellent Communication and Leadership</li>
+        </ul>
+    
+        <h3>Language Proficiency</h3>
+        <ul>
+            <li>Arabic (Mother Tongue)</li>
+            <li>English (Excellent)</li>
+            <li>German (Good)</li>
+        </ul>
+    
+       
+    </div>
+    
+
+    <div class="content" id="education">
+        <h2>Education</h2>
+        <p>
+            <strong>Master’s in Management Information Systems (Present)</strong><br>
+            University of Illinois at Chicago, Chicago, Illinois
+        </p>
+        <p>
+            <strong>Bachelor of Science in Computer Science (2018)</strong><br>
+            German Jordanian University, Amman, Jordan<br>
+            GPA: 77% (Grade Tier: Very Good)
+        </p>
+        <p>
+            <strong>Exchange Student in Computer Science Program (2017)</strong><br>
+            Technical University of Cologne, Cologne, Germany
+        </p>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            var pages = ['introduction', 'career', 'skills', 'education'];
+            for (var i = 0; i < pages.length; i++) {
+                var page = document.getElementById(pages[i]);
+                page.style.display = pages[i] === pageId ? 'block' : 'none';
+            }
+        }
+
+        // Function to change the background color
+        function changeBackgroundColor(color) {
+            document.querySelector('header').style.backgroundColor = color;
+
+            var contentElements = document.querySelectorAll('.content');
+            contentElements.forEach(function(element) {
+                element.style.backgroundColor = color;
+                });
+        }
+    </script>
+</body>
+
+</html>

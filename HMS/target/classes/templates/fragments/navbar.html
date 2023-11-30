@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" xmlns:th="">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+
+            <a class="navbar-brand" href="/">HMS Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarPatientMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Patients
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarPatientMenuLink">
+                    <a class="dropdown-item" href="/web/patient/list">View</a>
+                    <a class="dropdown-item" href="/web/patient/createForm">Create</a>
+                    <a class="dropdown-item" href="/web/patient/searchAndEdit">Search and Edit</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDoctorMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Doctor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDoctorMenuLink">
+                    <a class="dropdown-item" href="/web/doctor/list">View</a>
+                    <a class="dropdown-item" href="/web/doctor/createForm">Create Doctor</a>
+                    <a class="dropdown-item" href="/web/doctor/searchAndEdit">Search and Edit</a>
+                    <a class="dropdown-item" href="/web/doctor/createTimeSlotForm">Create TimeSlot</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarAppointmentMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Appointments
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarAppointmentMenuLink">
+                    <a class="dropdown-item" href="/web/appointment/list">View</a>
+                    <a class="dropdown-item" href="/web/appointment/createForm">Create</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarBillMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bills
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarBillMenuLink">
+                    <a class="dropdown-item" href="/web/bill/list">View</a>
+                    <a class="dropdown-item" href="/web/bill/createForm">Create</a>
+                    <a class="dropdown-item" href="/web/bill/searchAndEdit">Search and Edit </a>
+                </div>
+            </li>
+
+            <th:block th:if="${loggedIn}">
+                <li class="nav-item">
+                    <form th:action="@{/logout}" method="post" class="form-inline my-2 my-lg-0">
+                        <input type="submit" value="Logout" class="btn btn-outline-danger"/>
+                    </form>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+</nav>

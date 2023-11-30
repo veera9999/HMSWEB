@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>HMS TimeSlot - Create</title>
+
+
+</head>
+<body>
+<header>
+    <h1>Hospital Management System</h1>
+    <p>Final IDS517 Project Fall Semester 2023</p>
+    <p>Group 4</p>
+</header>
+
+<div class = "container">
+    <div th:insert="fragments/navbar.html"></div>
+
+    <div class="jumbotron">
+        <h3>Create Appointment</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="patientSelect">Select a Patient:</label>
+                <select class="form-control select2" id="patientSelect" >
+                    <!-- Add doctor options dynamically here if needed -->
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="doctorSelect">Select a Doctor:</label>
+                <select class="form-control select2" id="doctorSelect" onchange="fetchTimeslots()">
+                    <!-- Add doctor options dynamically here if needed -->
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="datePicker">Select a Date:</label>
+                <input class="form-control" type="date" id="datePicker" min="" onchange="fetchTimeslots()">
+            </div>
+            <div class="col-md-4">
+                <label>&nbsp;</label>
+                <div class="btn-group" role="group">
+                    <button class="btn btn-secondary" onclick="decrementDate()">Previous Day</button>
+                    <button class="btn btn-secondary" onclick="incrementDate()">Next Day</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeslot-grid-container" id="timeslotGridContainer">
+            <!-- Timeslot grid will be dynamically generated here -->
+        </div>
+        <div class="button-container">
+        <button class="btn btn-primary" onclick="insertAppointment()">Insert Appointment</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Hospital Management System</p>
+    <p>Designed and Developed by Veera Palla</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="/js/appointment/createForm.js"></script>
+</body>
+</html>
